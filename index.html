@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stepper Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="stepper">
+    <!-- Step 1 -->
+    <div id="step-1" class="form-step">
+      <h2 data-testid="title">Step 1</h2>
+      <form id="form-1">
+        <div>
+          <input data-testid="firstName" type="text" placeholder="First Name" />
+          <div class="error" data-testid="firstNameError" id="firstNameError"></div>
+        </div>
+        <div>
+          <input data-testid="lastName" type="text" placeholder="Last Name" />
+          <div class="error" data-testid="lastNameError" id="lastNameError"></div>
+        </div>
+        <div>
+          <input data-testid="age" type="number" placeholder="Age" />
+          <div class="error" data-testid="ageError" id="ageError"></div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Step 2 -->
+    <div id="step-2" class="form-step hidden">
+      <h2 data-testid="title">Step 2</h2>
+      <form id="form-2">
+        <div>
+          <input data-testid="phone" type="text" placeholder="Phone" />
+          <div class="error" data-testid="phoneError" id="phoneError"></div>
+        </div>
+        <div>
+          <input data-testid="email" type="email" placeholder="Email" />
+          <div class="error" data-testid="emailError" id="emailError"></div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Step 3 -->
+    <div id="step-3" class="form-step hidden">
+      <h2 data-testid="title">Step 3</h2>
+      <form id="form-3">
+        <div>
+          <input data-testid="seat" type="text" placeholder="Seat Preference" />
+          <div class="error" data-testid="seatError" id="seatError"></div>
+        </div>
+        <div>
+          <input data-testid="food" type="text" placeholder="Food Preference" />
+          <div class="error" data-testid="foodError" id="foodError"></div>
+        </div>
+        <div>
+          <input data-testid="allergies" type="text" placeholder="Allergies" />
+          <div class="error" data-testid="allergiesError" id="allergiesError"></div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Result -->
+    <div id="result" class="hidden">
+      <h2 data-testid="title" id="result-title">Form Successfully Submitted!</h2>
+      <div data-testid="firstName-display"></div>
+      <div data-testid="lastName-display"></div>
+      <div data-testid="age-display"></div>
+      <div data-testid="phone-display"></div>
+      <div data-testid="email-display"></div>
+      <div data-testid="seat-display"></div>
+      <div data-testid="food-display"></div>
+      <div data-testid="allergies-display"></div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="navigation">
+      <button id="back-button" data-testid="back" class="hidden">Back</button>
+      <button id="submit-button" data-testid="submit">Next</button>
+    </div>
+  </div>
+
+  <script src="src/script.js"></script>
+</body>
+</html>
